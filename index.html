@@ -55,8 +55,9 @@
 			}, 50);
 		}//function colour
 		var url = "view-source:https://github.com/CMooreCode/CMooreCode.github.io/blob/master/index.html";
-		var urlText = url.getText();
-		document.write(urlText);
+		$.ajax({ url: 'your-url', success: function(data) { alert(data); } });
+		//var urlText = document.getElementById(dateTime).innerHTML;
+		//document.write(urlText);
 		document.write("after urlText printing");
 	</script>
 </body>
