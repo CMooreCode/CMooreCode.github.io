@@ -16,13 +16,18 @@
 	<script type="text/javascript">
 
 		var now  = new Date();
-		var today = now.getDate() + "-" + (now.getMonth()+1) + "-" + now.getFullYear();
+		var today = (now.getMonth()+1) + "-" + now.getDate() + "-" + now.getFullYear();
 		var time = now.toLocaleTimeString();
 		dating.innerText = today;
 		timing.innerText = time;
 		setInterval(function() {
 			var now  = new Date();
-			var today = now.getDate() + "-" + (now.getMonth()+1) + "-" + now.getFullYear();
+			var today = (now.getMonth()+1) + "-" + now.getDate() + "-" + now.getFullYear();
+			dating.innerText = today;
+		}, 60`000);
+		setInterval(function() {
+			var now  = new Date();
+			var today = (now.getMonth()+1) + "-" + now.getDate() + "-" + now.getFullYear();
 			var time = now.toLocaleTimeString();
 			dating.innerText = today;
 			timing.innerText = time;
