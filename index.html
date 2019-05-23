@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tester</title>
+</head>
+
+<body bgcolor = 'orange'>
+
+	<h1 id="var" style="color:green;font-size:100px;">I Did I Did I Did I Did<br />I Did I Did I Did I Did</h1>
+	<h1 id="let" style="color:blue;font-size:100px;">A Thing A Thing A Thing<br />A Thing A Thing A Thing</h1>
+	<p id="timing" style="font-size:80px;"></p>
+	<p id="dating" style="font-size:80px;"></p>
+	<button id="btn" onclick="colour()">Start</button>
+	<!-- executing function on button click -->
+
+	<script type="text/javascript">
+
+		var now  = new Date();
+		var today = now.getDate() + "-" + (now.getMonth()+1) + "-" + now.getFullYear();
+		var time = now.toLocaleTimeString();
+		dating.innerText = today;
+		timing.innerText = time;
+		setInterval(function() {
+			var now  = new Date();
+			var today = now.getDate() + "-" + (now.getMonth()+1) + "-" + now.getFullYear();
+			var time = now.toLocaleTimeString();
+			dating.innerText = today;
+			timing.innerText = time;
+		}, 1000);
+
+		function colour() {
+			setInterval(function() {
+				if (document.getElementById('var').style.color == 'green')
+				var col1 = 'red';
+				else
+				col1 = 'green';
+				// setting value of color 1 through var
+				document.getElementById('var').style.color = col1;
+				// changing color of h1 in html
+			}, 55);
+
+			setInterval(function() {
+				if (document.getElementById('let').style.color == 'blue')
+					var col2 = 'fuchsia';
+				else
+					col2 = 'blue';
+				// setting value of color 1 through var
+
+				document.getElementById('let').style.color = col2;
+				if (document.body.style.background == 'orange')
+					document.body.style.background = 'yellow';
+				else
+					document.body.style.background = 'orange';
+				// changing color of h1 in html
+			}, 50);
+		}
+	</script>
+</body>
+</html>
