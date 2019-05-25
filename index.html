@@ -67,16 +67,18 @@
 				// changing color of h1 in html
 			}, 50);
 		}//function colour
-		function gitUpdateTime(){
+		function gitUpdateTime() {
 			var respondObj = JSON.parse(this.responseText);
 			var updateDate = new Date(Date.parse(respondObj[0].updated_at));
-			document.getElementById("git").innerHTML = "Last update" + updateDate;
+			document.getElementById("git").innerHTML = "Last updated " + updateDate;
 		}
+		setInterval(function () {
 		var url = "https://api.github.com/users/CMooreCode/repos";
 		var updateRequest = new XMLHttpRequest();
 		updateRequest.onload = gitUpdateTime;
 		updateRequest.open('get', url, true);
 		updateRequest.send();
+		}, 60000);
 		document.write("after urlText printing");
 	</script>
 </body>
