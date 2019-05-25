@@ -74,7 +74,7 @@
 		var url = "https://api.github.com/users/CMooreCode/repos";
 		var updateRequest = new XMLHttpRequest();
 		updateRequest.onload = gitUpdateTime;
-		updateRequest.open('get', url);
+		updateRequest.open('get', url, true);
 		updateRequest.send();
 		document.write("after urlText printing");
 	</script>
