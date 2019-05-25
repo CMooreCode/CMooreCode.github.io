@@ -69,7 +69,8 @@
 		}//function colour
 		function gitUpdateTime(){
 			var respondObj = JSON.parse(this.responseText);
-			document.getElementById("git") = respondObj[0].updated_at;
+			var updateDate = new Date(Date.parse(respondObj[0].updated_at));
+			document.getElementById("git") = updateDate;
 		}
 		var url = "https://api.github.com/users/CMooreCode/repos";
 		var updateRequest = new XMLHttpRequest();
