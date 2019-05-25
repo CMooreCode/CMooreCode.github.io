@@ -8,12 +8,18 @@
 			top: 20px;
 			right: 10px;
 		}
+		#var {
+			position: static;
+		}
+		#let {
+			position: static;
+		}
 	</style>
 	<title>Tester</title>
 </head>
 
 <body bgcolor = 'orange'>
-	<h3 id="git">Text that will be replaced with time stamps</h3> 
+	<h3 id="git"></h3> 
 	<h1 id="var" style="color:green;font-size:100px;">I Did I Did I Did I Did</h1>
 	<h1 id="let" style="color:blue;font-size:100px;">A Thing A Thing A Thing</h1>
 	<p id="timing" style="font-size:80px;"></p>
@@ -84,7 +90,6 @@
 			updateRequest.open('get', url, true);
 			updateRequest.send();
 		}, 60000);
-		document.write("after urlText printing");
 	</script>
 </body>
 </html>
