@@ -70,7 +70,7 @@
 		function gitUpdateTime(){
 			var respondObj = JSON.parse(this.responseText);
 			var updateDate = new Date(Date.parse(respondObj[0].updated_at));
-			document.getElementById("git") = "Last update" + updateDate;
+			document.getElementById("git").innerHTML = "Last update" + updateDate;
 		}
 		var url = "https://api.github.com/users/CMooreCode/repos";
 		var updateRequest = new XMLHttpRequest();
