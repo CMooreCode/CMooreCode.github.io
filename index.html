@@ -72,12 +72,17 @@
 			var updateDate = new Date(Date.parse(respondObj[0].updated_at));
 			document.getElementById("git").innerHTML = "Last updated " + updateDate;
 		}
-		setInterval(function () {
 		var url = "https://api.github.com/users/CMooreCode/repos";
 		var updateRequest = new XMLHttpRequest();
 		updateRequest.onload = gitUpdateTime;
 		updateRequest.open('get', url, true);
 		updateRequest.send();
+		setInterval(function () {
+			var url = "https://api.github.com/users/CMooreCode/repos";
+			var updateRequest = new XMLHttpRequest();
+			updateRequest.onload = gitUpdateTime;
+			updateRequest.open('get', url, true);
+			updateRequest.send();
 		}, 60000);
 		document.write("after urlText printing");
 	</script>
