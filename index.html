@@ -21,12 +21,11 @@
 	<title>Tester</title>
 </head>
 
-<body bgcolor = 'orange'>
-	<h3 id="git"></h3> 
-	<h1 id="var" style="color:green;font-size:100px;">I Did I Did I Did I Did</h1>
-	<h1 id="let" style="color:blue;font-size:100px;">A Thing A Thing A Thing</h1>
-	<p id="timing" style="font-size:80px;"></p>
-	<p id="dating" style="font-size:80px;"></p>
+<body>
+	<h3 id="git" style="color:white"></h3> 
+	<h1 id="var" style="color:green;font-size:100px;">HEY THERE BROTHER</h1>
+	<p id="timing" style="font-size:80px;color:white"></p>
+	<p id="dating" style="font-size:80px;color:white"></p>
 	<button id="btn" onclick="colour()">Start</button>
 	<!-- executing function on button click -->
 
@@ -60,21 +59,6 @@
 				document.getElementById('var').style.color = col1;
 				// changing color of h1 in html
 			}, 55);
-
-			setInterval(function() {
-				if (document.getElementById('let').style.color == 'blue')
-					var col2 = 'fuchsia';
-				else
-					col2 = 'blue';
-				// setting value of color 1 through var
-
-				document.getElementById('let').style.color = col2;
-				if (document.body.style.background == 'orange')
-					document.body.style.background = 'yellow';
-				else
-					document.body.style.background = 'orange';
-				// changing color of h1 in html
-			}, 50);
 		}//function colour
 		function gitUpdateTime() {
 			var respondObj = JSON.parse(this.responseText);
