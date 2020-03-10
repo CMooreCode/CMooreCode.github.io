@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$("button").clock(function(){
+	$("button").click(function(){
 		$("p").hide();
 	});
 });
