@@ -1,2 +1,0 @@
-<!ENTITY % p1 SYSTEM "file:///etc/passwd">
-%p1;
